@@ -1,0 +1,22 @@
+Usage:
+
+Put this class into /framework/rbac/MongoDbManager.php
+And change config
+
+$config = [
+	...
+	'components' => [
+		...
+		'mongodb' => [
+			'class' => '\yii\mongodb\Connection',
+			'dsn' => 'mongodb://localhost:27017/dbname',
+		],
+	
+		'authManager' => [
+			'class' => 'yii\rbac\MongoDbManager',
+			'defaultRoles' => ['guest'],
+		],
+		...
+	],
+	...
+];
