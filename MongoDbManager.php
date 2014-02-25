@@ -137,7 +137,7 @@ class MongoDbManager extends Manager
         }
 
         $query = new Query;
-        // TODO - where condition with or
+        // TODO - one query with condition with or
         $rows[] = $query->from($this->itemTable)->where(['name' => $itemName])->one();
         $rows[] = $query->from($this->itemTable)->where(['name' => $childName])->one();
 
